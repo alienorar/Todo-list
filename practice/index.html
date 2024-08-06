@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div
+        class="w-full mx-auto my-4 md:w-[50%] p-5 rounded-lg bg-[#f7fafc] dark:bg-[#171923] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+        <h1 class="font-bold text-3xl text-center">Todo</h1>
+        <form class="pt-2">
+            <div class="w-full flex flex-col gap-2 pb-3">
+                <input id="text" placeholder="Todo..."
+                    class="name_inpt rounded-md bg-transparent p-2 color-white text-[black] dark:text-white outline outline-2 transition-all ease-in-out"
+                    autocomplete="off" type="text" />
+            </div>
+            <button id="btn" type="submit"
+                class="w-[100%] bg-teal-500 py-4 font-medium bg text-[17px] bg-ContactButton cursor-pointer border-none rounded-md transition ease-in-out hover:bg-ContactButtonHover">
+                Kirish
+            </button>
+        </form>
+
+        <table class="w-[100%] mt-4 bg-green-500 mx-auto">
+            <thead>
+                <tr class="text-left p-2">
+                    <th>Todo</th>
+                    <th>date</th>
+                    <th class="text-right pr-4">action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5 offset-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header ">
+                        <h1 class="text-center text-success">Todo app</h1>
+                    </div>
+                    <div class="card-body d-flex gap-3 items-center">
+                        <input type="text" placeholder="create tasks " id="tasks_value" class="form-control">
+                        <button id="createBtn" type="submit" class="btn btn-success">Create</button>
+                    </div>
+                    <ol id="tasks_list">
+    
+                    </ol>
+                    <div class="card-footer d-flex justify-content-between">
+                        <h4 id="total_count"></h4>
+                        <button id="delete" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

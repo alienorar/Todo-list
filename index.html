@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        .custom-container {
+            margin: 20% auto;
+            width: 90%;
+
+
+        }
+
+        .disabled {
+            text-decoration: line-through;
+            color: red;
+        }
+    </style>
+    <section class="custom-container flex justify-center items-center">
+        <div>
+            <div class="flex justify-between gap-2">
+                <input type="text" placeholder="Create task" id="task_value"
+                    class="py-[6px] border-[2px] border-green-500 outline-none rounded">
+                <a href="#_"
+                    class=" rounded overflow-hidden group bg-green-500 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300 flex">
+                    <span
+                        class="absolute right-0 mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease "></span>
+                    <button class="relative outline-none w-full  bg-green-500 py-1 px-2" id="create_btn"
+                        type="submit">Button
+                        Text</button>
+                </a>
+            </div>
+            <div>
+                <ol id="tasks_list" class="list-decimal">
+
+                </ol>
+            </div>
+            <div class="flex justify-between p-2 bg-inherit">
+                <p id="total_tasks"></p>
+                <button id="delete_all" class="bg-red-700 p-2 rounded text-white">Clear</button>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
